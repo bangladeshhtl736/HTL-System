@@ -17,7 +17,7 @@
       <h3 class="text-base font-bold text-slate-800 mb-4">Google Sheet Sync</h3>
       
       <div class="bg-amber-50 border border-amber-200 p-4 rounded-lg mb-6 text-xs">
-        <label class="block font-bold text-gray-700 mb-2">Google Apps Script Web App URL:</label>
+        <label class="block font-bold text-gray-700 mb-2">https://script.google.com/macros/s/AKfycbwVwYBD9QEPuBtowNmtb2s69bxo83-amfInhWtj2n7sK_QgDK28txtADy--43Bgduwh/exec:</label>
         <div class="flex gap-2">
           <input type="text" id="sheet-url" class="border p-2.5 w-full rounded focus:outline-none" placeholder="https://script.google.com/macros/s/.../exec">
           <button onclick="syncSheetData()" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2.5 rounded font-bold whitespace-nowrap">Sync Data</button>
@@ -30,9 +30,15 @@
           <thead class="bg-slate-100">
             <tr>
               <th class="p-2 border">Discrete Job</th>
+		<th class="p-2 border">Discrete Job</th>
+		<th class="p-2 border">Order Item</th>
+		<th class="p-2 border">Quantity</th>
+		<th class="p-2 border">Operation Seq s (last status)</th>
+		<th class="p-2 border">Assembly</th>
               <th class="p-2 border">Customer</th>
-              <th class="p-2 border">Quantity</th>
-              <th class="p-2 border">Status</th>
+              <th class="p-2 border">RBO Name</th>
+              <th class="p-2 border">Material code</th>
+
             </tr>
           </thead>
           <tbody id="tbl-preview">
