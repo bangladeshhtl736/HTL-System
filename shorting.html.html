@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shorting - HTL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 font-sans p-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-between items-center bg-white p-4 rounded-xl shadow-sm border mb-4">
+      <a href="index.html" class="bg-slate-800 text-white px-3.5 py-1.5 rounded-md text-xs font-semibold">&larr; Back to Portal</a>
+      <h2 class="text-lg font-bold text-blue-700">7. Shorting Module</h2>
+    </div>
+
+    <div class="bg-slate-800 p-3 rounded-xl shadow mb-6">
+      <div class="text-xs text-slate-400 font-semibold mb-2 uppercase">Sub Navigators:</div>
+      <div class="flex space-x-3">
+        <button onclick="switchSub('Operator Mode')" class="bg-blue-600 text-white py-2 px-5 rounded-lg text-xs font-bold">Operator Mode</button>
+        <button onclick="switchSub('Batch Sorting')" class="bg-white text-slate-800 hover:bg-slate-100 py-2 px-5 rounded-lg text-xs font-bold">Batch Sorting</button>
+        <button onclick="switchSub('Reserve Data')" class="bg-white text-slate-800 hover:bg-slate-100 py-2 px-5 rounded-lg text-xs font-bold">Reserve Data</button>
+      </div>
+    </div>
+
+    <main class="bg-white p-6 rounded-xl shadow border min-h-[350px]">
+      <h3 id="sub-title" class="text-base font-bold text-slate-800 mb-4">Shorting -> Operator Mode</h3>
+      <form onsubmit="event.preventDefault(); alert('Saved!');" class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs bg-slate-50 p-4 rounded border">
+        <div><label class="block font-semibold mb-1">Operator ID</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div><label class="block font-semibold mb-1">Sorted Pcs</label><input type="number" class="border p-2 w-full rounded" required></div>
+        <div><label class="block font-semibold mb-1">Remarks</label><input type="text" class="border p-2 w-full rounded"></div>
+        <div class="col-span-full"><button class="bg-blue-600 text-white px-6 py-2 rounded font-bold">Save Shorting Data</button></div>
+      </form>
+    </main>
+  </div>
+  <script>
+    function switchSub(name) { document.getElementById('sub-title').innerText = "Shorting -> " + name; }
+  </script>
+</body>
+</html>

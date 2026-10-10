@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTL Production System Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 font-sans min-h-screen pb-10">
+
+  <!-- Header -->
+  <header class="bg-slate-900 text-white py-5 shadow-lg text-center px-8">
+    <h1 class="text-2xl font-extrabold tracking-wide text-blue-400">HTL PRODUCTION SYSTEM PORTAL</h1>
+    <p class="text-xs text-slate-400 mt-1">Select a module to log in and access workspace</p>
+  </header>
+
+  <!-- Module Cards Grid -->
+  <div class="max-w-7xl mx-auto p-6">
+    <h2 class="text-xl font-bold text-slate-800 mb-6 border-b pb-2">Production Modules Portal</h2>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+      
+      <!-- Card 1 -->
+      <div onclick="openLoginModal('planning.html', '1. Planning')" class="cursor-pointer bg-white p-6 rounded-xl shadow-md border hover:shadow-xl hover:border-blue-500 transition transform hover:-translate-y-1">
+        <div class="text-blue-600 font-extrabold text-lg mb-1">01</div>
+        <h3 class="font-bold text-slate-800 text-base">Planning</h3>
+        <p class="text-xs text-gray-500 mt-2">Update Data, Schedule & Reserve</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div onclick="openLoginModal('screen.html', '2. Screen Room')" class="cursor-pointer bg-white p-6 rounded-xl shadow-md border hover:shadow-xl hover:border-blue-500 transition transform hover:-translate-y-1">
+        <div class="text-blue-600 font-extrabold text-lg mb-1">02</div>
+        <h3 class="font-bold text-slate-800 text-base">Screen Room</h3>
+        <p class="text-xs text-gray-500 mt-2">CTS Data, Quality Check & Reserve</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div onclick="openLoginModal('ink.html', '3. Ink Room')" class="cursor-pointer bg-white p-6 rounded-xl shadow-md border hover:shadow-xl hover:border-blue-500 transition transform hover:-translate-y-1">
+        <div class="text-blue-600 font-extrabold text-lg mb-1">03</div>
+        <h3 class="font-bold text-slate-800 text-base">Ink Room</h3>
+        <p class="text-xs text-gray-500 mt-2">Ink Formula, Mix Ratio & Reserve</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div onclick="openLoginModal('printing.html', '4. Printing')" class="cursor-pointer bg-white p-6 rounded-xl shadow-md border hover:shadow-xl hover:border-blue-500 transition transform hover:-translate-y-1">
+        <div class="text-blue-600 font-extrabold text-lg mb-1">04</div>
+        <h3 class="font-bold text-slate-800 text-base">Printing</h3>
+        <p class="text-xs text-gray-500 mt-2">Operator Mode, Setup & Reserve</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div onclick="openLoginModal('inspection.html', '5. Full Sheet Inspection')" class="cursor-pointer bg-white p-6 rounded-xl shadow-md border hover:shadow-xl hover:border-blue-500 transition transform hover:-translate-y-1">
+        <div class="text-blue-600 font-extrabold text-lg mb-1">05</div>
+        <h3 class="font-bold text-slate-800 text-base">Full Sheet Inspection</h3>
+        <p class="text-xs text-gray-500 mt-2">Operator Mode, Defect Log & Reserve</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div onclick="openLoginModal('silicon.html', '6. Silicon')" class="cursor-pointer bg-white p-6 rounded-xl shadow-md border hover:shadow-xl hover:border-blue-500 transition transform hover:-translate-y-1">
+        <div class="text-blue-600 font-extrabold text-lg mb-1">06</div>
+        <h3 class="font-bold text-slate-800 text-base">Silicon</h3>
+        <p class="text-xs text-gray-500 mt-2">Coating Log, Operator & Reserve</p>
+      </div>
+
+      <!-- Card 7 -->
+      <div onclick="openLoginModal('shorting.html', '7. Shorting')" class="cursor-pointer bg-white p-6 rounded-xl shadow-md border hover:shadow-xl hover:border-blue-500 transition transform hover:-translate-y-1">
+        <div class="text-blue-600 font-extrabold text-lg mb-1">07</div>
+        <h3 class="font-bold text-slate-800 text-base">Shorting</h3>
+        <p class="text-xs text-gray-500 mt-2">Operator Mode, Sorting & Reserve</p>
+      </div>
+
+      <!-- Card 8 -->
+      <div onclick="openLoginModal('prepdi.html', '8. Pre PDI')" class="cursor-pointer bg-white p-6 rounded-xl shadow-md border hover:shadow-xl hover:border-blue-500 transition transform hover:-translate-y-1">
+        <div class="text-blue-600 font-extrabold text-lg mb-1">08</div>
+        <h3 class="font-bold text-slate-800 text-base">Pre PDI</h3>
+        <p class="text-xs text-gray-500 mt-2">Audit Log, Operator & Reserve</p>
+      </div>
+
+      <!-- Card 9 -->
+      <div onclick="openLoginModal('pdi.html', '9. PDI')" class="cursor-pointer bg-white p-6 rounded-xl shadow-md border hover:shadow-xl hover:border-blue-500 transition transform hover:-translate-y-1">
+        <div class="text-blue-600 font-extrabold text-lg mb-1">09</div>
+        <h3 class="font-bold text-slate-800 text-base">PDI</h3>
+        <p class="text-xs text-gray-500 mt-2">Final Inspection, Operator & Reserve</p>
+      </div>
+
+      <!-- Card 10 -->
+      <div onclick="openLoginModal('admin.html', '10. Admin Panel')" class="cursor-pointer bg-amber-500 text-white p-6 rounded-xl shadow-md hover:shadow-xl hover:bg-amber-600 transition transform hover:-translate-y-1">
+        <div class="text-amber-100 font-extrabold text-lg mb-1">10</div>
+        <h3 class="font-bold text-white text-base">Admin Panel</h3>
+        <p class="text-xs text-amber-100 mt-2">Job Listing, UPS Color & Users</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modal Login Popup -->
+  <div id="login-modal" class="hidden fixed inset-0 bg-slate-900 bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+    <div class="bg-white rounded-xl shadow-2xl max-w-md w-full p-6 relative border border-slate-200">
+      <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 font-bold text-lg">&times;</button>
+      
+      <h3 class="text-lg font-bold text-slate-800 mb-1" id="modal-title">Module Login</h3>
+      <p class="text-xs text-gray-500 mb-6">Enter user ID & password to proceed</p>
+
+      <!-- Step 1 Form -->
+      <form id="form-step1" onsubmit="event.preventDefault(); sendOTP();" class="space-y-4 text-xs">
+        <div>
+          <label class="block font-semibold text-gray-700 mb-1">User Email / ID</label>
+          <input type="email" id="login-email" value="user@company.com" class="w-full border p-2.5 rounded focus:ring-2 focus:ring-blue-500 focus:outline-none" required>
+        </div>
+        <div>
+          <label class="block font-semibold text-gray-700 mb-1">Password</label>
+          <input type="password" id="login-password" value="admin123" class="w-full border p-2.5 rounded focus:ring-2 focus:ring-blue-500 focus:outline-none" required>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2.5 rounded-lg font-bold transition">Send Login Code to Email</button>
+      </form>
+
+      <!-- Step 2 Form -->
+      <form id="form-step2" onsubmit="event.preventDefault(); verifyAndRedirect();" class="hidden space-y-4 text-xs">
+        <p class="text-xs text-center text-gray-600">Enter verification code sent to <br><span id="target-email" class="font-bold text-slate-800"></span></p>
+        <div>
+          <label class="block font-semibold text-gray-700 mb-1 text-center">Login Verification Code</label>
+          <input type="text" id="otp-code" value="123456" maxlength="6" class="w-full border p-2.5 rounded text-center text-xl font-mono tracking-widest focus:ring-2 focus:ring-green-500 focus:outline-none" required>
+        </div>
+        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-2.5 rounded-lg font-bold transition">Verify Code & Open Module</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    let targetPage = "";
+
+    function openLoginModal(pageFile, title) {
+      targetPage = pageFile;
+      document.getElementById('modal-title').innerText = "Login for " + title;
+      document.getElementById('login-modal').classList.remove('hidden');
+    }
+
+    function closeLoginModal() {
+      document.getElementById('login-modal').classList.add('hidden');
+      document.getElementById('form-step2').classList.add('hidden');
+      document.getElementById('form-step1').classList.remove('hidden');
+    }
+
+    function sendOTP() {
+      const email = document.getElementById('login-email').value;
+      document.getElementById('target-email').innerText = email;
+      document.getElementById('form-step1').classList.add('hidden');
+      document.getElementById('form-step2').classList.remove('hidden');
+      alert("Verification Code Sent! Use default code: 123456");
+    }
+
+    function verifyAndRedirect() {
+      const code = document.getElementById('otp-code').value;
+      if (code === "123456") {
+        window.location.href = targetPage;
+      } else {
+        alert("Incorrect Code! Try 123456");
+      }
+    }
+  </script>
+</body>
+</html>

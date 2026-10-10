@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planning Module - HTL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 font-sans p-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-between items-center bg-white p-4 rounded-xl shadow-sm border mb-4">
+      <a href="index.html" class="bg-slate-800 text-white px-3.5 py-1.5 rounded-md text-xs font-semibold">&larr; Back to Portal</a>
+      <h2 class="text-lg font-bold text-blue-700">1. Planning Module</h2>
+    </div>
+
+    <main class="bg-white p-6 rounded-xl shadow border min-h-[350px]">
+      <h3 class="text-base font-bold text-slate-800 mb-4">Planning Form (Auto Data Fetch)</h3>
+      
+      <form onsubmit="event.preventDefault(); alert('Saved!');" class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs bg-slate-50 p-4 rounded border">
+        
+        <!-- DJ Input Box with Auto-Search -->
+        <div>
+          <label class="block font-semibold mb-1 text-blue-700">Discrete Job (DJ Number)</label>
+          <input type="text" id="dj-input" onkeyup="findJobData()" placeholder="Type DJ Number..." class="border p-2.5 w-full rounded font-bold border-blue-400 focus:outline-none" required>
+        </div>
+
+        <!-- Auto Filled Fields -->
+        <div>
+          <label class="block font-semibold mb-1">Customer Name (Auto-filled)</label>
+          <input type="text" id="cust-output" class="border p-2.5 w-full rounded bg-gray-100 font-semibold" readonly>
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">Quantity (Auto-filled)</label>
+          <input type="text" id="qty-output" class="border p-2.5 w-full rounded bg-gray-100 font-semibold" readonly>
+        </div>
+
+        <div>
+          <label class="block font-semibold mb-1">Status (Auto-filled)</label>
+          <input type="text" id="status-output" class="border p-2.5 w-full rounded bg-gray-100 font-semibold" readonly>
+        </div>
+
+        <div class="col-span-full mt-2">
+          <button type="submit" class="bg-blue-600 text-white px-6 py-2.5 rounded font-bold">Save Record</button>
+        </div>
+
+      </form>
+    </main>
+  </div>
+
+  <script>
+    // Search Master Data from LocalStorage when typing DJ Number
+    function findJobData() {
+      const searchDj = document.getElementById('dj-input').value.trim().toLowerCase();
+      const masterJobs = JSON.parse(localStorage.getItem('master_jobs') || '[]');
+
+      const found = masterJobs.find(j => j.dj.toLowerCase() === searchDj);
+
+      if (found) {
+        document.getElementById('cust-output').value = found.customer;
+        document.getElementById('qty-output').value = found.quantity;
+        document.getElementById('status-output').value = found.status;
+      } else {
+        document.getElementById('cust-output').value = "Not Found";
+        document.getElementById('qty-output').value = "Not Found";
+        document.getElementById('status-output').value = "Not Found";
+      }
+    }
+  </script>
+</body>
+</html>
