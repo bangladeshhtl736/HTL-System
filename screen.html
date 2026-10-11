@@ -28,7 +28,63 @@
       <form onsubmit="event.preventDefault(); alert('Saved!');" class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs bg-slate-50 p-4 rounded border">
         <div><label class="block font-semibold mb-1">DJ Number</label><input type="text" class="border p-2 w-full rounded" required></div>
         <div><label class="block font-semibold mb-1">Item Reference</label><input type="text" class="border p-2 w-full rounded" required></div>
-                <div><label class="block font-semibold mb-1">Screen Frame Number</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div><label class="block font-semibold mb-1">Screen Frame Number</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div><label class="block font-semibold mb-1">Mesh Count</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div><label class="block font-semibold mb-1">Print Type</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div><label class="block font-semibold mb-1">Exposure Speed</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div class="col-span-full"><button class="bg-blue-600 text-white px-6 py-2 rounded font-bold">Save CTS Record</button></div>
+      </form>
+    </main>
+  </div>
+  <script>
+    function switchSub(name) { document.getElementById('sub-title').innerText = "Screen Room -> " + name; }
+  </script>
+</body>
+</html>
+
+
+<!-- 3 Sub Navigators -->
+    <div class="bg-slate-800 p-3 rounded-xl shadow mb-6">
+      <div class="text-xs text-slate-400 font-semibold mb-2 uppercase">Sub Navigators:</div>
+      <div class="flex space-x-3">
+       <button onclick="switchSub('Quality Check Data Docket')" class="bg-white text-slate-800 hover:bg-slate-100 py-2 px-5 rounded-lg text-xs font-bold">Quality Check Data Docket</button>
+       
+      </div>
+    </div>
+ <main class="bg-white p-6 rounded-xl shadow border min-h-[350px]">
+      <h3 id="sub-title" class="text-base font-bold text-slate-800 mb-4">Screen Room -> CTS Data</h3>
+      <form onsubmit="event.preventDefault(); alert('Saved!');" class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs bg-slate-50 p-4 rounded border">
+        <div><label class="block font-semibold mb-1">Sales Order Number</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div><label class="block font-semibold mb-1">quantity</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div><label class="block font-semibold mb-1">Screen Name</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div><label class="block font-semibold mb-1">Power</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div><label class="block font-semibold mb-1">Velocity</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div><label class="block font-semibold mb-1">Exposure Speed</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div class="col-span-full"><button class="bg-blue-600 text-white px-6 py-2 rounded font-bold">Save CTS Record</button></div>
+      </form>
+    </main>
+  </div>
+  <script>
+    function switchSub(name) { document.getElementById('sub-title').innerText = "Screen Room -> " + name; }
+  </script>
+</body>
+</html>
+
+<!-- 3 Sub Navigators -->
+    <div class="bg-slate-800 p-3 rounded-xl shadow mb-6">
+      <div class="text-xs text-slate-400 font-semibold mb-2 uppercase">Sub Navigators:</div>
+      <div class="flex space-x-3">
+        <button onclick="switchSub('CTS Data')" class="bg-blue-600 text-white py-2 px-5 rounded-lg text-xs font-bold">CTS Data</button>
+        <button onclick="switchSub('Quality Check Data Docket')" class="bg-white text-slate-800 hover:bg-slate-100 py-2 px-5 rounded-lg text-xs font-bold">Quality Check Data Docket</button>
+        <button onclick="switchSub('Reserve Data')" class="bg-white text-slate-800 hover:bg-slate-100 py-2 px-5 rounded-lg text-xs font-bold">Reserve Data</button>
+      </div>
+    </div>
+ <main class="bg-white p-6 rounded-xl shadow border min-h-[350px]">
+      <h3 id="sub-title" class="text-base font-bold text-slate-800 mb-4">Screen Room -> CTS Data</h3>
+      <form onsubmit="event.preventDefault(); alert('Saved!');" class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs bg-slate-50 p-4 rounded border">
+        <div><label class="block font-semibold mb-1">DJ Number</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div><label class="block font-semibold mb-1">Item Reference</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div><label class="block font-semibold mb-1">Screen Frame Number</label><input type="text" class="border p-2 w-full rounded" required></div>
         <div><label class="block font-semibold mb-1">Mesh Count</label><input type="text" class="border p-2 w-full rounded" required></div>
         <div><label class="block font-semibold mb-1">Print Type</label><input type="text" class="border p-2 w-full rounded" required></div>
         <div><label class="block font-semibold mb-1">Exposure Speed</label><input type="text" class="border p-2 w-full rounded" required></div>
