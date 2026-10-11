@@ -26,8 +26,11 @@
     <main class="bg-white p-6 rounded-xl shadow border min-h-[350px]">
       <h3 id="sub-title" class="text-base font-bold text-slate-800 mb-4">Screen Room -> CTS Data</h3>
       <form onsubmit="event.preventDefault(); alert('Saved!');" class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs bg-slate-50 p-4 rounded border">
-        <div><label class="block font-semibold mb-1">Screen ID</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div><label class="block font-semibold mb-1">DJ Number</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div><label class="block font-semibold mb-1">Item Reference</label><input type="text" class="border p-2 w-full rounded" required></div>
+                <div><label class="block font-semibold mb-1">Screen Frame Number</label><input type="text" class="border p-2 w-full rounded" required></div>
         <div><label class="block font-semibold mb-1">Mesh Count</label><input type="text" class="border p-2 w-full rounded" required></div>
+        <div><label class="block font-semibold mb-1">Print Type</label><input type="text" class="border p-2 w-full rounded" required></div>
         <div><label class="block font-semibold mb-1">Exposure Speed</label><input type="text" class="border p-2 w-full rounded" required></div>
         <div class="col-span-full"><button class="bg-blue-600 text-white px-6 py-2 rounded font-bold">Save CTS Record</button></div>
       </form>
